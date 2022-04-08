@@ -1,0 +1,20 @@
+{
+    "name": "football_tas/football_tas",
+    "description": "WordPress theme",
+    "type": "project",
+    "license": "GPL",
+    "authors": [
+        {
+            "name": "Deepak Prabhakar",
+            "email": "nivadech@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+    },
+    "autoload": {
+        "psr-4": {
+            "FTAS_THEME\\": "./inc"
+        }
+    }
+}

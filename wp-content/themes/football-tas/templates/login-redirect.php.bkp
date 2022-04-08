@@ -1,0 +1,25 @@
+<?php 
+/**
+ * Template Name: Redirect after Login
+ */
+
+$current_user_id = get_current_user_id();
+$select_country_page = get_user_meta($current_user_id,'selected_country_page', true);
+$select_competetion_page = get_user_meta($current_user_id,'select_competetion_page', true);
+
+$default_page = "/";
+
+if( $select_country_page != "completed" )
+{
+    $default_page = "/select-country";
+}
+
+if( $select_competetion_page != "completed" )
+{
+    $default_page = "/select-competetion";
+}
+
+
+$url = site_url().$default_page;
+
+echo "<script>window.location.href='$url'</script>";

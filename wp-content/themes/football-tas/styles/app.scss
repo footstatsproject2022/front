@@ -1,0 +1,27 @@
+// scss-docs-start theme-colors-map
+$danger     : #d2246b;
+$success    : #4db169;
+
+$theme-colors: (
+  "primary":    #303f9f,
+  "secondary":  #616161,
+  "success":    $success,
+  "info":       #03a9f4,
+  "warning":    #fd723b,
+  "danger":     $danger,
+  "light":      #edf1f4,
+  "dark":       #111111,
+) !default;
+
+$nav-link-color                   :#333333;
+$nav-link-hover-color             : $danger;
+$nav-tabs-border-color            : $danger;
+
+$nav-tabs-link-active-color       :#ffffff;
+$nav-tabs-link-active-bg          : $danger;
+$nav-tabs-link-active-border-color: $danger;
+
+$nav-pills-link-active-color      :#ffffff;
+$nav-pills-link-active-bg         : $danger;
+
+@import "../node_modules/bootstrap/scss/bootstrap";

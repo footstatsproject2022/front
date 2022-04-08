@@ -1,0 +1,59 @@
+<?php 
+/**
+ * Template Name: Register Page
+ */
+
+ get_header();
+ ?>
+ 
+ <main class="login-page">
+     <div class="container-fluid">
+        <div class="main-content-area inner-box">
+            <div class="container">
+                <h1 class="heading">Register To Your Account</h1>
+                <p class="description">We are fastest growing in the sports industry, specializing in the in-depth <br>analysis of detailed football data. Choose Game from list </p>
+                
+                <!-- Begin::Login & Register Box -->
+                <div class="row justify-content-center my-5">
+                    <div class="col-sm-4">
+                        <?php echo do_shortcode('[ultimatemember form_id="12"]'); ?>
+                    </div>
+
+                    <div class="col-sm-1 text-center align-self-center">
+                        <span class="seprator-column-slash">/</span>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <?php echo do_shortcode('[ultimatemember_social_login id=100]'); ?>
+                    </div>
+                </div>
+                <!-- End::Login & Register Box -->
+
+                <div class="text-center">
+                    <a href="" class="text-dark">Already Have Account?</a>
+                </div>
+            </div>
+
+
+            <!-- Footer area -->
+            <footer class="site-footer mt-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <a href="" class="text-decocartion-none text-dark">Privacy Policy</a>
+                        </div>
+                        <div class="col-lg-6 text-end">
+                            <p>Copyright@Football 2022</p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+
+        </div>
+     </div>
+ </main>
+
+<!-- <script src="<?php echo get_stylesheet_directory_uri() ?>/scripts/login.js"></script> -->
+
+ <?php
+ get_footer();

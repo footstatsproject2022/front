@@ -1,0 +1,82 @@
+jQuery(function($){
+
+    load_team_player();
+
+    function load_team_player()
+    {
+        var URL     = "/football/wp-json/api/v1/team/";
+        var dataObj = {
+            squad_id : admin.squad_id,
+        };
+
+        jQuery.ajax({
+            type: 'POST',
+            url: URL,
+            data: dataObj,
+            dataType: "json",
+            beforeSend: function() {
+                jQuery("#team-players").html("Please wait...");
+            },
+            success: function(response)
+            {
+               jQuery("#team-players").html(response);
+               team_players_scroller();
+            },
+            error: function(error){
+                console.log(error);
+                alert('something went wrong, please try again later');
+            }
+        });
+    }
+
+
+    function team_players_scroller()
+    {
+        var window_width = jQuery(window).width();
+        if( window_width > 991 ){
+            var content_height = jQuery("#team-player-content").height();
+            if( content_height > 200 ){
+                jQuery("#team-players .team-players-list").height(content_height);
+            }
+        }
+    }
+
+
+    //Team player data
+    jQuery(document).on("click", ".team-player-item", function(){
+        jQuery(this).parent().addClass('active').siblings().removeClass('active');
+        
+        var playerId = jQuery(this).data("playerid");
+        load_player_statistics(playerId);
+
+    });
+
+
+    function load_player_statistics(playerId)
+    {
+        var URL     = "/football/wp-json/api/v1/team/player/statistics";
+        var dataObj = {
+            playerId : playerId,
+        };
+
+        jQuery.ajax({
+            type: 'POST',
+            url: URL,
+            data: dataObj,
+            dataType: "json",
+            beforeSend: function() {
+                jQuery("#team-player-content").html("Please wait...");
+            },
+            success: function(response)
+            {
+               jQuery("#team-player-content").html(response);
+               //console.log(response);
+            },
+            error: function(error){
+                console.log(error);
+                alert('something went wrong, please try again later');
+            }
+        });
+    }
+
+});

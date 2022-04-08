@@ -1,0 +1,93 @@
+<?php 
+
+
+ get_header("second");
+ ?>
+ 
+ <!-- Begin::Home Banner -->
+ <div class="hp-banner">
+    <span></span>
+ </div>
+ <!-- End::Home Banner -->
+
+ <!-- Begin::Home Page Relax data -->
+ <div class="hp-relax-data">
+     <div class="container">
+         <h2>Footstats is The First <br> Platform Where Market Value Comes <br> From Real Data </h2>
+         <p>How Player Market Value Workes Based on Their Performance</p>
+         <img src="http://localhost/football/wp-content/uploads/2022/03/tv14-dark-vs-light-mode.png" alt="" />
+     </div>
+ </div>
+ <!-- End::Home Page Relax data -->
+
+
+ <!-- Begin::Register -->
+ <div class="hp-register">
+     <div class="container">
+
+        <div class="hp-counter">
+            <div class="row align-items-center">
+                <div class="col-sm-3">
+                    <div class="inner">
+                        <h3>99<span>+</span></h3>
+                        <p>Match Analysis</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="inner">
+                        <h3>32<span>+</span></h3>
+                        <p>Match Analysis</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="inner">
+                        <h3>125<span>+</span></h3>
+                        <p>Team members</p>
+                    </div>
+                </div>
+                <div class="col-sm-3">
+                    <div class="inner">
+                        <h3>240<span>+</span></h3>
+                        <p>New Matches Per Week</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="content">
+            <div class="row">
+                <div class="col-sm-5 p-0 left">
+                    <div class="inner">
+                        <img src="http://localhost/football/wp-content/uploads/2022/03/player-football-png-5-Transparent-Images-Free.png" alt=""/>
+                    </div>
+                </div>
+                <div class="col-sm-7 p-0 right align-self-end">
+                    <div class="inner">
+                        <div class="content-box">
+                            <h3>Fastest Growing In The Sports Industry, Specializing In the In-Depth Analysis Of Detailed Football Data</h3>
+                            <p>The Professional Platform For People Working In the Football World: videos, Data, Statistics, And Tools.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </div>
+ </div>
+ <!-- End::Register -->
+
+ <script>
+ setBanner();
+ function setBanner(){
+    var w_width     = jQuery(window).width();
+    var w_height    = jQuery(window).height();
+
+    if( w_width > 991 ){
+        jQuery(".hp-banner").css("min-height",w_height);
+    }
+ }
+ </script>
+
+
+ <?php
+ get_footer();

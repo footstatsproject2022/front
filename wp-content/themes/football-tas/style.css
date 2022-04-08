@@ -1,0 +1,559 @@
+/*
+Theme Name: Football TAS
+Theme URI: theappsense.com
+Author: Deepak Prabhakar
+Author URI: theappsense.com
+Description: A Gutenberg-ready bootstrap 5.
+Requires at least: WordPress 5.9.2
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: football_tas
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*--- Header ---*/
+body {
+  font-family: "Poppins", sans-serif !important;
+}
+
+#main-nav .brand-logo {
+  position: relative;
+  padding: 15px 0px;
+}
+#main-nav .brand-logo .custom-logo-link img {
+  max-height: 100px;
+  width: auto;
+}
+#main-nav .right-side .inputWithIcon {
+  position: relative;
+}
+#main-nav .right-side .inputWithIcon input {
+  padding-left: 60px;
+  padding-right: 30px;
+  background-color: transparent;
+  color: #fff;
+  border: 0px;
+  border-radius: 50px;
+  height: 50px;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.12), 0 1px 5px 0 rgba(0, 0, 0, 0.2);
+}
+#main-nav .right-side .inputWithIcon input::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+#main-nav .right-side .inputWithIcon input:-ms-input-placeholder {
+  color: #fff;
+}
+#main-nav .right-side .inputWithIcon input::-ms-input-placeholder {
+  color: #fff;
+}
+#main-nav .right-side .inputWithIcon i {
+  position: absolute;
+  left: 0;
+  color: #fff;
+  transition: 0.3s;
+  width: 60px;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+#main-nav .right-side .account{
+    color:#fff;
+}
+#main-nav .right-side .account .username {
+  font-size: 18px;
+  font-weight: 600;
+ color:#fff;
+}
+#main-nav .right-side .account .description {
+  font-size: 13px;
+  color:#fff;
+}
+#main-nav .right-side .account .dropdown-toggle::after {
+  display: none;
+  color:#fff;
+}
+#main-nav.header-second {
+    background:#000;
+}
+#main-nav.header-second .brand-logo {
+  padding: 15px 0px;
+}
+
+.main-content-area {
+  background-color: #fff;
+  border-radius: 0px;
+}
+
+/*----- Login Page ----*/
+.login-page .main-content-area {
+  padding: 50px 0px;
+}
+.login-page .main-content-area h1.heading {
+  text-align: center;
+}
+.login-page .main-content-area p.description {
+  text-align: center;
+}
+.login-page .main-content-area .seprator-column-slash {
+  font-size: 24px;
+}
+
+/*--- default layout page ---*/
+.default-layout-page .main-content-area {
+  background-color: #f6f6f6;
+  padding: 50px 0px;
+}
+
+.tabs-selection-cct {
+  margin: 0px -15px;
+}
+.tabs-selection-cct .nav-item {
+  margin: 15px 15px;
+}
+.tabs-selection-cct .nav-item .nav-link {
+  position: relative;
+  color: #333;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+.tabs-selection-cct .nav-item .nav-link .flag-icon {
+  width: 60px;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: #f6f6f6;
+  margin-right: 15px;
+  color: #333;
+  border-radius: 5px;
+}
+.tabs-selection-cct .nav-item .nav-link .flag-icon i {
+  font-size: 30px;
+}
+.tabs-selection-cct .nav-item .nav-link .selected-country .title {
+  font-size: 22px;
+}
+.tabs-selection-cct .nav-item .nav-link.active {
+  background-color: #d2246b;
+}
+.tabs-selection-cct .nav-item .nav-link.active .angle-down {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-top: 30px solid #d2246b;
+}
+
+.select-country-page .all-countries {
+  background-color: #fff;
+  padding: 35px 25px;
+  border-radius: 5px;
+}
+.select-country-page .all-countries .character-filter a.item {
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0px 1px;
+}
+.select-country-page .all-countries .character-filter a.item.active {
+  background-color: #000;
+  color: #fff;
+  border-radius: 20px;
+  width: 28px;
+  height: 32px;
+  text-align: center;
+  display: inline-block;
+  line-height: 30px;
+}
+.select-country-page .all-countries #load-countries .countries {
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-right: 15px;
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+.select-country-page .all-countries #load-countries .countries::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 5px;
+}
+.select-country-page .all-countries #load-countries .countries::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.select-country-page .all-countries #load-countries .countries::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country {
+  margin-bottom: 15px;
+  width: 100%;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country span {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #999;
+  text-align: left;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: 0.375rem 0.75rem;
+  font-size: 24px;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  border-radius: 50rem !important;
+  width: 100%;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country span img {
+  width: 23px;
+  border: 2px solid #fff;
+  border-radius: 50px;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country input[type=radio] {
+  display: none;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country input[type=radio]:checked + span {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+.select-country-page .all-countries #load-countries #all-available-countries .btn-country.available span {
+  color: #333;
+}
+
+#all-available-competitions .btn-competition {
+  margin-bottom: 15px;
+  width: 100%;
+}
+#all-available-competitions .btn-competition span {
+  display: inline-block;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #333;
+  text-decoration: none;
+  vertical-align: middle;
+  cursor: pointer;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid #ccc;
+  padding: 15px 10px;
+  font-size: 1rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  width: 100%;
+  border-radius: 3px;
+  text-align: center;
+}
+#all-available-competitions .btn-competition input[type=radio] {
+  display: none;
+}
+#all-available-competitions .btn-competition input[type=radio]:checked + span {
+  background-color: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+/*--- Home Page ---*/
+body.page-template-home {
+  padding: 0px;
+  overflow-x: hidden;
+}
+@media (min-width: 1200px) {
+  body.page-template-home {
+    background: #fff;
+  }
+}
+
+@media (min-width: 1200px) {
+  body.page-template-home #main-nav {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+  }
+}
+
+.hp-banner {
+  position: relative;
+  background-image: url("http://localhost/football/wp-content/uploads/2022/03/home-banner.jpg");
+  background-size: cover;
+  background-position: center;
+}
+.hp-banner:before {
+  position: absolute;
+  content: "";
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #0000005e;
+}
+
+.hp-relax-data {
+  background-color: #f1f1f1;
+  text-align: center;
+  padding: 120px 0px;
+}
+.hp-relax-data h2 {
+  margin-bottom: 25px;
+}
+.hp-relax-data img {
+  margin-bottom: 35px;
+}
+
+.hp-register {
+  background-color: #c6e6cf;
+  padding: 35px 0px;
+}
+.hp-register .hp-counter {
+  margin-bottom: 70px;
+}
+.hp-register .hp-counter .row {
+  background: #d2246b;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+@media (min-width: 1200px) {
+  .hp-register .hp-counter .row {
+    height: 200px;
+    margin-top: -135px;
+  }
+}
+.hp-register .hp-counter .row .inner {
+  text-align: center;
+}
+.hp-register .hp-counter .row .inner h3 {
+  font-size: 50px;
+  color: #fff;
+}
+.hp-register .hp-counter .row .inner h3 span {
+  color: #4db169;
+}
+.hp-register .hp-counter .row .inner p {
+  color: #fff;
+}
+.hp-register .content .row .left .inner {
+  position: relative;
+  background-color: #4db169;
+  width: 100%;
+}
+.hp-register .content .row .left .inner img {
+  max-width: calc(100% - 80px);
+  position: relative;
+  z-index: 100;
+}
+.hp-register .content .row .left .inner:after {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #4db169;
+  transform-origin: bottom left;
+  -ms-transform: skew(-15deg, 0deg);
+  -webkit-transform: skew(-15deg, 0deg);
+  transform: skew(-15deg, 0deg);
+}
+.hp-register .content .row .right .inner {
+  background-color: #fff;
+  padding: 50px 50px;
+  position: relative;
+}
+.hp-register .content .row .right .inner .content-box {
+  position: relative;
+  z-index: 100;
+}
+.hp-register .content .row .right .inner:before {
+  content: " ";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: -80px;
+  background: #fff;
+  transform-origin: bottom left;
+  -ms-transform: skew(-15deg, 0deg);
+  -webkit-transform: skew(-15deg, 0deg);
+  transform: skew(-15deg, 0deg);
+}
+
+/*------- Team Players list --------*/
+.team-player-data-page .main-content-area {
+  padding: 20px 5px;
+  background-color: #f4f4f4;
+}
+
+.team-players {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 15px;
+}
+.team-players ul.team-players-list {
+  position: relative;
+  list-style: none;
+  padding: 0px;
+  overflow-y: scroll;
+  height: 400px;
+}
+.team-players ul.team-players-list::-webkit-scrollbar {
+  width: 4px;
+  border-radius: 5px;
+}
+.team-players ul.team-players-list::-webkit-scrollbar-track {
+  background-color: #ddd;
+  border-radius: 5px;
+}
+.team-players ul.team-players-list::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+.team-players ul.team-players-list li.team-player {
+  position: relative;
+  margin-bottom: 15px;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+.team-players ul.team-players-list li.team-player a {
+  text-decoration: none;
+}
+.team-players ul.team-players-list li.team-player a img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  object-position: center top;
+  background: #f1f1f1;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.team-players ul.team-players-list li.team-player a .details {
+  line-height: 22px;
+}
+.team-players ul.team-players-list li.team-player a .details .name {
+  display: block;
+  color: #111;
+  font-weight: 600;
+  font-size: 18px;
+}
+.team-players ul.team-players-list li.team-player a .details .description {
+  color: #777;
+  display: block;
+}
+.team-players ul.team-players-list li.team-player.active {
+  background: #d2246b;
+}
+.team-players ul.team-players-list li.team-player.active a .details .name {
+  color: #fff;
+}
+.team-players ul.team-players-list li.team-player.active a .details .description {
+  color: #fff;
+}
+
+#team-player-details .player-basic-details-area .player-image img {
+  object-fit: cover;
+  border-radius: 5px;
+  background-color: #f4f4f4;
+}
+#team-player-details .player-basic-details-area table th {
+  font-weight: 400;
+  color: #777;
+}
+#team-player-details .player-basic-details-area table th:before {
+  position: relative;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: #111;
+  display: inline-block;
+  border-radius: 8px;
+  margin-right: 5px;
+  top: -1px;
+}
+#team-player-details .player-basic-details-area table td {
+  text-transform: capitalize;
+}
+
+/*-------Home Page ------*/
+body.page-template-home-page {
+  padding: 0px;
+  background: #fff;
+}
+body.page-template-home-page .header-second.transparent {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 1px solid #ffffff14;
+}
+body.page-template-home-page .header-second.transparent .brand-logo {
+  padding: 15px 0px;
+}
+
+body.home.page-template .page-header {
+  display: none !important;
+}
+
+/*----- Footer --------*/
+footer.site-footer {
+}
+
+/*------- Transparent header Layout Page -----------*/
+body.page-template-Transparent-header {
+  padding: 0px;
+}
+body.page-template-Transparent-header header.transparent-header-nav {
+  background: #000;
+}
+body.page-template-Transparent-header header.transparent-header-nav .brand-logo {
+  padding: 15px 0px !important;
+}
+body.page-template-Transparent-header .page-header {
+  padding: 60px 0px;
+  text-align: center;
+  background: #f1f1f1;
+}
+body.page-template-Transparent-header .page-header h1 {
+  margin-bottom: 0;
+  font-size: 50px;
+  font-weight: 600;
+  line-height: 60px;
+  letter-spacing: 5px;
+}
+body.page-template-Transparent-header footer.site-footer {
+  margin: 0px !important;
+}
+
+/*----- Login & Register Page ------*/
+.um-login .um-form .um-field, .um-register .um-form .um-field {
+  padding-top: 30px;
+}
+.um-login .um-form .um-field:first-child, .um-register .um-form .um-field:first-child {
+  padding-top: 0px;
+}
+.um-login .um-form .um-field .um-form-field, .um-register .um-form .um-field .um-form-field {
+  height: 50px !important;
+  border-radius: 5px;
+}
+.um-login .um-form .um-button, .um-register .um-form .um-button {
+  height: 50px !important;
+  width: 100% !important;
+  background-color: #d2246b !important;
+  color: #fff !important;
+}
+
+/*# sourceMappingURL=style.css.map */
